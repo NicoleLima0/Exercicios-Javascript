@@ -1,1 +1,1 @@
-# Exercicios-Javascript
+# Exercicios do curso de JavaScript! 📚
