@@ -5,24 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detran</title>
-    <div id="res">
-
-    </div>
 </head>
 <body>
     <h1> Velocímetro </h1>
     <input type="number" id="vel123">
     <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
     <script>
         function calcular () {
             var tn1 = document.getElementById ("vel123")
             var res = document.getElementById ("res")
             var tn2 = Number (tn1.value)
             res.innerHTML= (`<p>Sua velocidade foi de ${tn2} Km/h </p>`) 
-            if (vel > 60) {
+            if (tn2 > 60) {
                 res.innerHTML += `Você foi multado!!!`
-            }
-            
+            }     
         }
     </script>
 </body>
