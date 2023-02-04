@@ -9,23 +9,24 @@
 <body>
     <h1>Nacionalidade</h1>
     <input type="text" id="pais">
-    <input type="button" value="Verificar" onclick="clicar()">
-    <div id = 'res'>
-
+    <!-- <input type="button" value="Verificar" onclick="clicar()"> -->
+    <button onclick="clicar()">Verificar</button>
+    <div id = "res">
+    </div>
+    <div id = "condicao"> 
     </div>
     <script>
         function clicar () {
             var pais = document.querySelector("input#pais")
-            var resultado = document.querySelector("div#res")
-            resultado.innerText=`Seu país é ${pais}`
-            if (pais == "Brasil") {
-                resultado.innerText = "Você é Brasileiro"
-            } else (pais != 'Brasil') {
-                resultado.innerText = "Você é estrangeiro"
+            var resultado = document.querySelector("#res")
+            var texto = pais.value
+            resultado.innerHTML=("Seu resultado é: " + texto)
+            if (texto === "Brasil"){
+                condicao.innerHTML = `Você é brasileiro(a)!`
+            }else{
+                condicao.innerHTML = `Você é estrangeiro(a)!`
             }
-
-                
-        }
+            }
     </script>
 </body>
 </html>
