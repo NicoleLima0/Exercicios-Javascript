@@ -11,9 +11,9 @@ function Contar() {
         var inicio2 = Number(inicio.value)
         var fim2 = Number(fim.value)
         var passo2 = Number(passo.value)
-        if (passo <= 0) {
+        if (passo2 <= 0) {
             alert('O passo é inválido, será usado o valor 1')
-            passo = 1
+            passo2 = 1
         }
     }
     if (inicio2 < fim2) {
