@@ -1,32 +1,29 @@
-var numero = document.getElementById("num")
-var selnum = document.getElementById ("denovo")
-var resposta = document.getElementById ("res")
-var valor = []
+let num = document.querySelector('input#fnum')
+let lista = document.querySelector('select#flista')
+let res = document.querySelector('div#res')
+let valores = []
 
-function simounao (n){
-    if (Number(n) >= 1 && Number(n) <= 100){
+function isNumero(n){
+    if(Number(n) >= 1 && Number(n) <= 100){
         return true
-    } else {
+    }else{
         return false
     }
 }
 
+function inLista(n, l){
+    if(l.indexOf(Number(n)) != -1){
+        return true
+    }else{
+        return false
+    }
+}
 
-
-
-
-function adicionar (){
-    
-    if (numero.value.length == 0 || input.value == ""){
-        window.alert ('Valor inválido ou já adicionado na lista')
+function adicionar(){
+    if(isNumero(num.value) && !inLista(num.value, valores)){
+        alert ('tudo ok')
     } else {
-        var n = Number(numero.value)
-        selnum.innerText = ""
-        while (n >= 100){
-            var item = document.createElement ('option')
-            item.text = `O valor ${n} foi adicionado`
-            item.value = `selnum ${n}`
-            selnum.appendChild(item)
-        }
+        window.alert ("Número inválido ou já adicionado na lista")
+   debugger
     }
 }
